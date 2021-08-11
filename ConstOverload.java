@@ -16,16 +16,16 @@ class Rectangle
 	}
 	void area()
 	{
-		System.ot.println(length*width);
+		System.out.println(length*width);
 	}
 }
 class ConstOverload
 {
-	pubic static void main(String args[])
+	public static void main(String args[])
 	{
-		Rectangle r1 =new Rectangle();
-		Rectangle r2 =new Rectangle(10);
-		Rectangle r3 =new Rectangle(10,20);
+		Rectangle r1=new Rectangle();
+		Rectangle r2=new Rectangle(10);
+		Rectangle r3=new Rectangle(10,20);
 		r1.area();
 		r2.area();
 		r3.area();
