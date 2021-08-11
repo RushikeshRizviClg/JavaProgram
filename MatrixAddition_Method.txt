@@ -1,0 +1,43 @@
+import java.util.*;
+class MatrixAddition_Method
+{ public static void main(String args[ ])
+{ int n;
+Scanner input=new Scanner(System.in);
+System.out.print("Enter Row or column of a matrix :\n");
+n=input.nextInt();
+int result[][]= new int[n][n];
+ int set1[ ][ ] = new int[n][n];
+ int set2[ ][ ] = new int[n][n];
+System.out.print(" Matrix A :\n");
+accept_Matrix(set1,n);
+System.out.print(" Matrix B :\n");
+accept_Matrix(set2,n);
+System.out.print(" Matrix A :\n");
+display_Matrix(set1,n);
+System.out.print(" Matrix B :\n");
+display_Matrix(set2,n);
+add (set1,set2,result,n,n);
+System.out.print(" Matrix A+B :\n");
+display_Matrix(result,n);
+}
+ static void accept_Matrix(int x[][], int r)
+{ Scanner input=new Scanner(System.in);
+System.out.print("Enter elements of a matrix is :\n");
+ for (int i=0 ; i<r ; i++)
+ { for (int j=0 ; j<r ; j++)
+ x[i][j]=input.nextInt();
+ }
+}
+static void display_Matrix(int x[][],int r)
+{ for (int i=0 ; i<r ; i++)
+ { for (int j=0 ; j<r ; j++)
+ System.out.print(x[i][j]+"\t");
+ System.out.println(" ");
+ }
+}
+static void add (int set1[][],int set2[][],int result[][],int r,int c)
+{ System.out.println(" ");
+ for (int i=0 ; i<r ; i++)
+ { for (int j=0 ; j<c ; j++)
+ result[i][j] = set1[i][j] + set2[i][j] ;
+ }}}
